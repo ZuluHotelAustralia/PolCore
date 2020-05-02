@@ -1,0 +1,19 @@
+name: Publish Docker
+
+on: [push, pull-request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Publish to Registry
+      uses: elgohr/Publish-Docker-Github-Action@master
+      env:
+        POL_RELEASE_URL=https://github.com/polserver/polserver/archive/9b8fe4e33a24d99941145cfffaa0ba25aad852f5.zip
+      with:
+        name: ${{ github.repository }}/polcore
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        buildargs: POL_RELEASE_URL
