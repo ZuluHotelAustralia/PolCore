@@ -12,7 +12,7 @@ jobs:
       env:
         POL_RELEASE_URL: "https://github.com/polserver/polserver/archive/9b8fe4e33a24d99941145cfffaa0ba25aad852f5.zip"
       with:
-        name: ${{ github.repository }}/polcore
+        name: zuluhotelaustralia/polcore/polcore
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
