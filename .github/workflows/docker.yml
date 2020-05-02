@@ -10,7 +10,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       env:
-        POL_RELEASE_URL=https://github.com/polserver/polserver/archive/9b8fe4e33a24d99941145cfffaa0ba25aad852f5.zip
+        POL_RELEASE_URL="https://github.com/polserver/polserver/archive/9b8fe4e33a24d99941145cfffaa0ba25aad852f5.zip"
       with:
         name: ${{ github.repository }}/polcore
         username: ${{ github.actor }}
